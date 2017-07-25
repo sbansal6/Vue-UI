@@ -5,6 +5,15 @@
         <li class="nav-item">
           <router-link :to="'/dashboard'" class="nav-link"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-info">NEW</span></router-link>
         </li>
+        <li class="nav-item">
+            <router-link :to="'/accounts'" class="nav-link"><i class="icon-speedometer"></i> Accounts </router-link>
+        </li>
+        <li class="nav-item">
+            <router-link :to="'/datasets'" class="nav-link"><i class="icon-speedometer"></i> DataSets </router-link>
+        </li>
+        <li class="nav-item">
+            <router-link :to="'/studio'" class="nav-link"><i class="icon-speedometer"></i> Studio </router-link>
+        </li>
       </ul>
     </nav>
   </div>
