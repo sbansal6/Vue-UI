@@ -1,6 +1,6 @@
 <template>
   <div class="animated fadeIn">
-    Hello World
+    Hello from DataSet
   </div>
 </template>
 
