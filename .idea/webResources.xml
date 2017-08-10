@@ -6,6 +6,7 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/vuejs-cinema" />
+            <path value="file://$PROJECT_DIR$/Vue_Starter" />
           </resourceRoots>
         </entryData>
       </entry>

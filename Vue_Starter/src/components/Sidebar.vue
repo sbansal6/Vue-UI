@@ -3,7 +3,7 @@
     <nav class="sidebar-nav">
       <ul class="nav">
         <li class="nav-item">
-          <router-link :to="'/dashboard'" class="nav-link"><i class="icon-speedometer"></i> Dashboard </router-link>
+          <router-link :to="'/calendar'" class="nav-link"><i class="icon-speedometer"></i> Calendar </router-link>
         </li>
         <li class="nav-item">
             <router-link :to="'/accounts'" class="nav-link"><i class="icon-speedometer"></i> Accounts </router-link>
