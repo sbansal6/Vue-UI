@@ -10,13 +10,24 @@
   export default {
     methods: {
       dec(){
-        this.$store.commit('setCurrentMonth', this.month - 1 )
+        if (this.month === 1) {
+          this.$store.commit('setCurrentYear', this.year - 1 )
+          this.$store.commit('setCurrentMonth', 12 )
+        } else {
+          this.$store.commit('setCurrentMonth', this.month - 1 )
+        }
+
       },
       inc(){
-        this.$store.commit('setCurrentMonth', this.month + 1 )
+        if (this.month === 12) {
+          this.$store.commit('setCurrentYear', this.year + 1 )
+          this.$store.commit('setCurrentMonth', 1 )
+        } else {
+          this.$store.commit('setCurrentMonth', this.month + 1 )
+        }
       }
     },
-    computed:{
+    computed: {
       year() {
         return this.$store.state.currentYear
       },

@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/AdTech" />
       <excludeFolder url="file://$MODULE_DIR$/Vue_Full_Project" />
       <excludeFolder url="file://$MODULE_DIR$/Vue_Starter/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/apimonk/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/vuejs-calendar" />
