@@ -1,29 +1,40 @@
 <template>
-    <div id="api-form">
-        <div class="input-group" style="margin-top: 10px">
-            <select id="select">
+    <div>
+        <div class="row form-group">
+            <div class="col-md-1">
+                <select id="select" class="form-control" style="width: 100%">
                 <option>GET</option>
                 <option>POST</option>
                 <option>PUT</option>
                 <option>DELETE</option>
-            </select>
-            <input v-model="url" type="text" placeholder="http://api.com" class="form-control">
-            <span class="input-group-btn">
-        <button class="btn btn-info" v-on:click="onGo" style="margin-left: 2px" type="button">Go!</button>
-   </span>
-        </div>
-        <div style="margin-top: 10px">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
-            </ul>
-            <div class="pull-right">
-                {{formattedStatus}}
+                </select>
             </div>
-            <textarea style="width: 100%; min-height:500px !important; box-sizing: border-box" v-model="text" placeholder="response here" class="form-control" rows="5" id="comment"></textarea>
+            <div class="col-md-10">
+                <input v-model="url" type="text" style="width: 100%" placeholder="http://api.com" class="form-control">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info pull-right" style="width: 100%" v-on:click="onGo" type="button">Go!</button>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-8">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#">Raw</a></li>
+                    <li><a href="#">Flat</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <button type="button" style="" class="btn btn-primary pull-right">Status <span class="badge">200</span></button>
+            </div>
+
+        </div>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <textarea style="min-height:500px !important; box-sizing: border-box" v-model="text" placeholder="response here" class="form-control"  id="comment"></textarea>
+            </div>
         </div>
     </div>
+
 </template>
 
 <script>

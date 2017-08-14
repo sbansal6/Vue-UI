@@ -10,17 +10,17 @@
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 150px;
     overflow: scroll;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: absolute;
-    left: 250px;
+    left: 150px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -150px;
     overflow-y: auto;
     background: #000;
     -webkit-transition: all 0.5s ease;
@@ -103,7 +103,7 @@
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 150px;
     }
     .fixed-brand{
         width: 150px;
@@ -139,7 +139,7 @@
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
-        padding-left: 250px;
+        padding-left: 150px;
     }
     #wrapper.toggled-2 #page-content-wrapper {
         position: relative;
