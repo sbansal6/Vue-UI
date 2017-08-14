@@ -5,7 +5,9 @@ import Root from './screens/Root.vue'
 import router from './router'
 import moment from 'moment-timezone'
 import store from './store'
+import  VueAutosize from 'vue-autosize'
 
+Vue.use(VueAutosize)
 moment.tz.setDefault('UTC')
 
 Object.defineProperty(Vue.prototype, '$moment', { get () { return this.$root.moment } })
