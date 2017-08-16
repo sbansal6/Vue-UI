@@ -147,6 +147,24 @@ describe('flaten.Service',function(){
                 'weather.values'])
             expect(result.unwind).to.deep.equal(['weather','weather.values'])
         })
+
+        it('case 7 -> data is an object with one property an array of objects, that property has another property that is an array of array',function(){
+            const source  = {"coord":{"lon":-0.13,"lat":51.51},"weather":[
+                {
+                    "id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d","values":[1,2,{"moreValues":[12,14,16]}]
+                }]}
+            const result = parseProperties(source)
+            expect(result.fields).to.deep.equal([ 'coord.lon',
+                'coord.lat',
+                'weather.id',
+                'weather.main',
+                'weather.description',
+                'weather.icon',
+                'weather.values',
+                'weather.values.moreValues'
+            ])
+            expect(result.unwind).to.deep.equal(['weather','weather.values','weather.values.moreValues'])
+        })
     })
 
     describe('parseJson',function(){
@@ -242,6 +260,29 @@ describe('flaten.Service',function(){
                 expect(item).to.have.property('weather.values')
 
             })
+        })
+
+        it('case 7 -> data is an object with one property an array of objects, that property has another property that is an array of array',function(){
+            const source  = {"coord":{"lon":-0.13,"lat":51.51},"weather":[
+                {
+                    "id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d","values":[1,2,{"moreValues":[12,14,16]}]
+                }]}
+            const result = flatenService.parseJson(source)
+            const csvResult = csvjson.toObject(result,csvOptions)
+            expect(csvResult).to.be.an('array')
+            expect(csvResult.length).to.equal(5)
+            csvResult.forEach(function(item){
+                expect(item).to.have.property('coord.lon')
+                expect(item).to.have.property('coord.lat')
+                expect(item).to.have.property('weather.id')
+                expect(item).to.have.property('weather.main')
+                expect(item).to.have.property('weather.description')
+                expect(item).to.have.property('weather.icon')
+                expect(item).to.have.property('weather.values')
+                expect(item).to.have.property('weather.values.moreValues')
+
+            })
+
         })
 
     })

@@ -31,7 +31,6 @@ function parseProperties(data){
         }
 
         else  {
-
             addToFields(key,fields)
         }
     }
