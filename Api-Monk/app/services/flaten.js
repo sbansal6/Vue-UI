@@ -15,34 +15,27 @@ function parseProperties(data){
     const fields = []
     const unwind = []
 
-    //{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d"}],"base":"stations","main":{"temp":280.32,"pressure":1012,"humidity":81,"temp_min":279.15,"temp_max":281.15},"visibility":10000,"wind":{"speed":4.1,"deg":80},"clouds":{"all":90},"dt":1485789600,"sys":{"type":1,"id":5091,"message":0.0103,"country":"GB","sunrise":1485762037,"sunset":1485794875},"id":2643743,"name":"London","cod":200}
-
-    // case when data is an object
-    for  (let key in data) {
-
-        // check if property is an object
-        if (is.object(data[key])) {
-            parseObjectType(key,data[key],fields,unwind)
-        }
-
-        // if property is an array
-        else if (is.array(data[key])) {
-            parseArrayType(key,data[key],fields,unwind)
-        }
-
-        else  {
-            addToFields(key,fields)
-        }
+    // data can be of type object or array
+    if (is.object(data)){
+        parseObjectType("",data,fields,unwind)
+    } else if (is.array(data)){
+        parseArrayType("",data,fields,unwind)
+    } else {
+        throw new Exception("Not a valid json")
     }
-
-    // case when data is an array
-    // loop over top 100 items
 
     return {
         fields,unwind
     }
 }
 
+/**
+ * Recursive function to loop over array type property
+ * @param parentKey
+ * @param array
+ * @param fields
+ * @param unwind
+ */
 function parseArrayType(parentKey,array,fields,unwind){
     "use strict";
     addToFields(parentKey,unwind)
@@ -86,7 +79,6 @@ function parseObjectType(parentKey,object,fields,unwind){
  */
 function addToFields(keyName,fields){
     "use strict";
-    // add if not already exists
     let field = _.find(fields,function(f){return f === keyName})
     if (!field){
         fields.push(keyName)
@@ -114,17 +106,6 @@ function parseJson(data){
     let csv = json2csv({ data: data, fields: properties.fields, unwindPath:properties.unwind });
     return csv
 }
-
-// var sampleData = {"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d","values":[1,2,3]}]}
-// var csv = json2csv({ data: sampleData, fields: [ 'coord.lon',
-//     'coord.lat',
-//     'weather.id',
-//     'weather.main',
-//     'weather.description',
-//     'weather.icon',
-//     'weather.values'
-// ], unwindPath: ['weather','weather.values'] });
-// console.log(csv)
 
 module.exports  = {
     parseJson

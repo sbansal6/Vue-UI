@@ -285,6 +285,51 @@ describe('flaten.Service',function(){
 
         })
 
+        it('should parse whole weather data object',function(){
+            const source = {"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d"}],"base":"stations","main":{"temp":280.32,"pressure":1012,"humidity":81,"temp_min":279.15,"temp_max":281.15},"visibility":10000,"wind":{"speed":4.1,"deg":80},"clouds":{"all":90},"dt":1485789600,"sys":{"type":1,"id":5091,"message":0.0103,"country":"GB","sunrise":1485762037,"sunset":1485794875},"id":2643743,"name":"London","cod":200}
+            const result = flatenService.parseJson(source)
+            const csvResult = csvjson.toObject(result,csvOptions)
+            expect(csvResult).to.be.an('array')
+            expect(csvResult.length).to.equal(1)
+            csvResult.forEach(function(item){
+                expect(item).to.have.property('coord.lon')
+                expect(item).to.have.property('coord.lat')
+                expect(item).to.have.property('weather.id')
+                expect(item).to.have.property('weather.main')
+                expect(item).to.have.property('weather.description')
+                expect(item).to.have.property('weather.icon')
+                expect(item).to.have.property('base')
+                expect(item).to.have.property('main.temp')
+                expect(item).to.have.property('main.pressure')
+                expect(item).to.have.property('main.humidity')
+                expect(item).to.have.property('main.temp_min')
+                expect(item).to.have.property('main.temp_max')
+                expect(item).to.have.property('visibility')
+                expect(item).to.have.property('wind.speed')
+                expect(item).to.have.property('wind.deg')
+                expect(item).to.have.property('clouds.all')
+                expect(item).to.have.property('dt')
+            })
+        })
+
+        it('should parse an array of data',function(){
+            const source = [
+                {"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d"},
+                {"id":500,"main":"Drizzle2","description":"light intensity drizzle2","icon":"09d2"}
+                ]
+            const result = flatenService.parseJson(source)
+            const csvResult = csvjson.toObject(result,csvOptions)
+            expect(csvResult).to.be.an('array')
+            expect(csvResult.length).to.equal(2)
+            csvResult.forEach(function(item){
+                expect(item).to.have.property('id')
+                expect(item).to.have.property('main')
+                expect(item).to.have.property('description')
+                expect(item).to.have.property('icon')
+            })
+        })
+
+
     })
 
 })
