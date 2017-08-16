@@ -19,8 +19,8 @@
         <div class="row form-group">
             <div class="col-md-8">
                 <ul class="nav nav-pills">
-                    <li class="active"><a @click.prevent="rawGridSelected" >Raw</a></li>
-                    <li><a @click.prevent="flatGridSelected">Flat</a></li>
+                    <li :class="rawGridClass"><a @click.prevent="rawGridSelected" >Raw</a></li>
+                    <li :class="flatGridClass"><a @click.prevent="flatGridSelected">Flat</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -87,6 +87,16 @@
             },
             flatGrid(){
                 return this.$store.state.grid.flat
+            },
+            rawGridClass() {
+                return {
+                    active:this.$store.state.grid.raw
+                }
+            },
+            flatGridClass(){
+                return {
+                    active:this.$store.state.grid.flat
+                }
             }
         },
         components :{
