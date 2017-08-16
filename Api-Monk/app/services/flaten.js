@@ -21,7 +21,7 @@ function parseProperties(data){
     } else if (is.array(data)){
         parseArrayType("",data,fields,unwind)
     } else {
-        throw new Exception("Not a valid json")
+        throw new Error("Not a valid json")
     }
 
     return {

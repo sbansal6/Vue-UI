@@ -18,13 +18,14 @@
     "json2csv": "^3.11.1",
     "underscore": "^1.8.3",
     "vue": "^2.4.2",
-    "vue-form-generator": "^2.0.0",
-    "vue-router": "^2.7.0"
+    "vue-router": "^2.7.0",
+    "vue-tables-2": "^0.6.64",
+    "vuex": "^2.3.1",
+    "csvjson": "^4.3.4"
   },
   "devDependencies": {
     "chai": "^4.1.1",
     "css-loader": "^0.28.4",
-    "csvjson": "^4.3.4",
     "file-loader": "^0.11.2",
     "rewire": "^2.5.2",
     "style-loader": "^0.18.2",

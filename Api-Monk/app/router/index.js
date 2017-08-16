@@ -21,7 +21,7 @@ export default new Router({
             component: ApiFormScreen
         },
         {
-            path: '/datasets',
+            path: '/',
             name: 'DataSets',
             component: ApiFormScreen
         }
