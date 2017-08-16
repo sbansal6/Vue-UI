@@ -28,8 +28,6 @@
                 for (let key in this.dataFlattened[0]) {
                     columns.push(key)
                 }
-                console.log(columns)
-
                 return columns
             },
             options() {
