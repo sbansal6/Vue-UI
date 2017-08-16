@@ -1,7 +1,7 @@
 <template>
     <div class="row form-group">
         <div class="col-md-12">
-            <v-client-table :data="dataFlattened" :columns="columns"></v-client-table>
+            <v-client-table :data="dataFlattened" :columns="columns" :options="options"></v-client-table>
         </div>
     </div>
 </template>
@@ -13,7 +13,7 @@
     const csvjson = require('csvjson');
     const csvOptions = {
         delimiter : ',', // optional
-        quote     : '"' // optional
+        quote     : '"', // optional
     };
 
     Vue.use(ClientTable)
@@ -31,9 +31,21 @@
                 return columns
             },
             options() {
-
+                return {
+                    skin : 'table table-striped table-bordered table-condensed table-background',
+                    filterable:false,
+                    sortable:[]
+                }
             }
 
         }
     }
 </script>
+
+<style>
+    .table-background {
+        background-color: #eee;
+        opacity: 1;
+        border-radius: 4px;
+    }
+</style>
