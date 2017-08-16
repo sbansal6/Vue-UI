@@ -10,7 +10,7 @@
                 </select>
             </div>
             <div class="col-md-10">
-                <input v-model="url" type="text" style="width: 100%" placeholder="http://api.com" class="form-control">
+                <input autofocus v-model="url" ref="input" type="text" style="width: 100%" placeholder="http://api.com" class="form-control">
             </div>
             <div class="col-md-1">
                 <button class="btn btn-info pull-right" style="width: 100%" v-on:click="onGo" type="button">Go!</button>
@@ -23,6 +23,10 @@
                     <li :class="flatGridClass"><a @click.prevent="flatGridSelected">Flat</a></li>
                 </ul>
             </div>
+            <div :class="box_cls" :style="box_style">
+                <div :class="label_cls"></div>
+                <spinner></spinner>
+            </div>
             <div class="col-md-4">
                 {{formattedStatus}}
                 <!--<button type="button" style="" class="btn btn-primary pull-right">Status <span class="badge">200</span></button>-->
@@ -30,13 +34,16 @@
         </div>
         <raw-grid v-if="rawGrid"></raw-grid>
         <table-grid v-if="flatGrid"></table-grid>
+
     </div>
+
 </template>
 
 <script>
     import axios from 'axios'
     import RawGrid from '../components/RawGrid.vue'
     import TableGrid from '../components/TableGrid.vue'
+    import Spinner from 'vue-simple-spinner'
 
     export default {
         data : function(){
@@ -45,6 +52,7 @@
                 text: "",
                 status: undefined,
                 statusText: undefined
+
             }
         },
         methods : {
@@ -100,7 +108,10 @@
             }
         },
         components :{
-            RawGrid,TableGrid
+            RawGrid,TableGrid,Spinner
+        },
+        mounted(){
+            this.$refs.input.focus();
         }
 
     }

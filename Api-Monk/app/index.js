@@ -9,5 +9,13 @@ new Vue({
     data: {
         message: "Hello There From Vue RReset"
     },
-    store
+    store,
+    components : {
+
+    },
+    computed : {
+        showSpinner() {
+            return true
+        }
+    }
 });

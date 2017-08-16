@@ -32,7 +32,7 @@
             },
             options() {
                 return {
-                    skin : 'table table-striped table-bordered table-condensed table-background',
+                    skin : 'table table-striped table-bordered table-background',
                     filterable:false,
                     sortable:[]
                 }
