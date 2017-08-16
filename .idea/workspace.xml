@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flaten.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="flaten.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Api-Monk/app/services/flaten.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="110" column="81" lean-forward="false" selection-start-line="110" selection-start-column="81" selection-end-line="110" selection-end-column="81" />
+            <state relative-caret-position="520">
+              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc;n#addToFields#0" expanded="false" />
                 <element signature="n#!!block;n#addToFields#0" expanded="false" />
@@ -56,20 +56,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flaten.test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flaten.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Api-Monk/app/services/flaten.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="151" column="30" lean-forward="false" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+            <state relative-caret-position="403">
+              <caret line="229" column="173" lean-forward="true" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="173" />
               <folding>
-                <element signature="e#557#799#0" expanded="false" />
-                <element signature="e#843#1486#0" expanded="false" />
-                <element signature="e#1526#1957#0" expanded="false" />
-                <element signature="e#2479#3006#0" expanded="false" />
-                <element signature="e#3116#3755#0" expanded="false" />
-                <element signature="e#3894#4589#0" expanded="false" />
-                <element signature="e#4707#5052#0" expanded="false" />
-                <element signature="e#5198#5720#0" expanded="false" />
+                <element signature="e#683#925#0" expanded="false" />
+                <element signature="e#969#1612#0" expanded="false" />
+                <element signature="e#1652#2083#0" expanded="false" />
+                <element signature="e#2208#2498#0" expanded="false" />
+                <element signature="e#2605#3132#0" expanded="false" />
+                <element signature="e#3242#3881#0" expanded="false" />
+                <element signature="e#4020#4715#0" expanded="false" />
+                <element signature="e#4833#5178#0" expanded="false" />
+                <element signature="e#6047#6503#0" expanded="false" />
+                <element signature="e#6610#7256#0" expanded="false" />
+                <element signature="e#7366#8185#0" expanded="false" />
+                <element signature="e#8324#9230#0" expanded="false" />
+                <element signature="e#9348#9958#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -328,7 +333,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="JavaScriptPreferStrict" value="true" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Vue_Starter/node_modules/typescript/lib" />
@@ -502,25 +507,25 @@
       <workItem from="1502521043064" duration="1624000" />
       <workItem from="1502522684071" duration="751000" />
       <workItem from="1502560816326" duration="31115000" />
-      <workItem from="1502835446723" duration="6237000" />
+      <workItem from="1502835446723" duration="8029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117582000" />
+    <option name="totallyTimeSpent" value="119374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07846235" sideWeight="0.4953765" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13217483" sideWeight="0.4953765" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22508961" sideWeight="0.4953765" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3792746" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49015543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3388601" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36373058" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19283155" sideWeight="0.50462353" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -548,7 +553,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -826,7 +831,7 @@
         <state relative-caret-position="260">
           <caret line="104" column="40" lean-forward="false" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
             <element signature="e#2276#2469#0" expanded="false" />
             <element signature="e#2591#3431#0" expanded="false" />
           </folding>
@@ -849,32 +854,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Api-Monk/app/services/flaten.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="229" column="173" lean-forward="true" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="173" />
+          <folding>
+            <element signature="e#683#925#0" expanded="false" />
+            <element signature="e#969#1612#0" expanded="false" />
+            <element signature="e#1652#2083#0" expanded="false" />
+            <element signature="e#2208#2498#0" expanded="false" />
+            <element signature="e#2605#3132#0" expanded="false" />
+            <element signature="e#3242#3881#0" expanded="false" />
+            <element signature="e#4020#4715#0" expanded="false" />
+            <element signature="e#4833#5178#0" expanded="false" />
+            <element signature="e#6047#6503#0" expanded="false" />
+            <element signature="e#6610#7256#0" expanded="false" />
+            <element signature="e#7366#8185#0" expanded="false" />
+            <element signature="e#8324#9230#0" expanded="false" />
+            <element signature="e#9348#9958#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Api-Monk/app/services/flaten.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="110" column="81" lean-forward="false" selection-start-line="110" selection-start-column="81" selection-end-line="110" selection-end-column="81" />
+        <state relative-caret-position="520">
+          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc;n#addToFields#0" expanded="false" />
             <element signature="n#!!block;n#addToFields#0" expanded="false" />
             <element signature="n#!!doc;n#keyName#0" expanded="false" />
             <element signature="n#!!block;n#keyName#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Api-Monk/app/services/flaten.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="151" column="30" lean-forward="false" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
-          <folding>
-            <element signature="e#557#799#0" expanded="false" />
-            <element signature="e#843#1486#0" expanded="false" />
-            <element signature="e#1526#1957#0" expanded="false" />
-            <element signature="e#2479#3006#0" expanded="false" />
-            <element signature="e#3116#3755#0" expanded="false" />
-            <element signature="e#3894#4589#0" expanded="false" />
-            <element signature="e#4707#5052#0" expanded="false" />
-            <element signature="e#5198#5720#0" expanded="false" />
           </folding>
         </state>
       </provider>

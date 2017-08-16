@@ -46,9 +46,9 @@ function parseProperties(data){
 
 function parseArrayType(parentKey,array,fields,unwind){
     "use strict";
+    addToFields(parentKey,unwind)
     array.forEach(function(item){
         if (is.object(item)) {
-            addToFields(parentKey,unwind)
             parseObjectType(parentKey,item,fields,unwind)
         } else if (is.array(item)) {
 
@@ -69,7 +69,11 @@ function parseObjectType(parentKey,object,fields,unwind){
     for (let key in object){
         if (is.object(object[key])) {
             parseObjectType(keyName([parentKey,key]),object[key],fields,unwind)
-        } else {
+        }
+        else if (is.array(object[key])){
+            parseArrayType(keyName([parentKey,key]),object[key],fields,unwind)
+        }
+        else {
             addToFields(keyName([parentKey,key]),fields)
         }
     }
@@ -108,9 +112,20 @@ function keyName(keys) {
  */
 function parseJson(data){
     let properties = parseProperties(data)
-    let csv = json2csv({ data: data, fields: properties.fields, unwind:properties.unwind });
+    let csv = json2csv({ data: data, fields: properties.fields, unwindPath:properties.unwind });
     return csv
 }
+
+// var sampleData = {"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d","values":[1,2,3]}]}
+// var csv = json2csv({ data: sampleData, fields: [ 'coord.lon',
+//     'coord.lat',
+//     'weather.id',
+//     'weather.main',
+//     'weather.description',
+//     'weather.icon',
+//     'weather.values'
+// ], unwindPath: ['weather','weather.values'] });
+// console.log(csv)
 
 module.exports  = {
     parseJson
