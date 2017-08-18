@@ -25,7 +25,7 @@
             </div>
             <div :class="box_cls" :style="box_style">
                 <div :class="label_cls"></div>
-                <spinner></spinner>
+                <spinner v-if="show"></spinner>
             </div>
             <div class="col-md-4">
                 {{formattedStatus}}
@@ -34,7 +34,6 @@
         </div>
         <raw-grid v-if="rawGrid"></raw-grid>
         <table-grid v-if="flatGrid"></table-grid>
-
     </div>
 
 </template>
@@ -51,8 +50,8 @@
                 url : "",
                 text: "",
                 status: undefined,
-                statusText: undefined
-
+                statusText: undefined,
+                show:false
             }
         },
         methods : {

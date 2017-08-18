@@ -19,8 +19,19 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            },
+            {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        js: 'babel-loader?presets[]=es2015,presets[]=stage-3,plugins[]=transform-runtime'
+                    },
+                    autoprefixer: true
+                }
             },
             {
                 test: /\.css$/,
@@ -51,5 +62,6 @@ module.exports = {
                 loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
             }
         ]
+
     }
 };
