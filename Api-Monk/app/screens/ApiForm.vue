@@ -52,8 +52,6 @@
 
             </div>
         </div>
-
-
         <raw-grid v-if="rawGrid"></raw-grid>
         <table-grid v-if="flatGrid"></table-grid>
     </div>
