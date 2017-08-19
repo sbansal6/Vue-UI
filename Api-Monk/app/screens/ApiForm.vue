@@ -16,22 +16,44 @@
                 <button class="btn btn-info pull-right" style="width: 100%" v-on:click="onGo" type="button">Go!</button>
             </div>
         </div>
-        <div class="row form-group">
+        <div class="form-group">
             <div class="col-md-8">
-                <ul class="nav nav-pills">
-                    <li :class="rawGridClass"><a @click.prevent="rawGridSelected" >Raw</a></li>
-                    <li :class="flatGridClass"><a @click.prevent="flatGridSelected">Flat</a></li>
-                </ul>
-            </div>
-            <div :class="box_cls" :style="box_style">
-                <div :class="label_cls"></div>
-                <spinner v-if="show"></spinner>
+                 <div class="row form-group">
+                     <ul class="nav nav-pills">
+                         <li :class=""><a @click.prevent="" >Query</a></li>
+                         <li :class=""><a @click.prevent="">Header</a></li>
+                         <li :class=""><a @click.prevent="">Body</a></li>
+                     </ul>
+                 </div>
+                <div class="row form-group">
+                    <ul class="nav nav-pills">
+                        <li :class="rawGridClass"><a @click.prevent="rawGridSelected" >Raw</a></li>
+                        <li :class="flatGridClass"><a @click.prevent="flatGridSelected">Flat</a></li>
+                        <li :class=""><a @click.prevent="">Sql</a></li>
+                        <li :class=""><a @click.prevent="">Charts</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="col-md-4">
-                {{formattedStatus}}
-                <!--<button type="button" style="" class="btn btn-primary pull-right">Status <span class="badge">200</span></button>-->
+                <div class="row form-group">
+                    <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                            <td>Status</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>StatusText</td>
+                            <td>Ok</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
+
+
         <raw-grid v-if="rawGrid"></raw-grid>
         <table-grid v-if="flatGrid"></table-grid>
     </div>
