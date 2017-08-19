@@ -18,10 +18,11 @@
 
     Vue.use(ClientTable)
     export default {
+        props:['data'],
         computed:{
             dataFlattened(){
-                const data = this.$store.state.apiResponse.rawResponseData
-                return csvjson.toObject(parseJson(data),csvOptions)
+                console.log(typeof this.data)
+                return csvjson.toObject(parseJson(JSON.parse(this.data)),csvOptions)
             },
             columns() {
                 const columns = []

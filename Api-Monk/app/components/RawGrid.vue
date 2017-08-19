@@ -1,8 +1,7 @@
 <template>
     <div class="row form-group">
         <div class="col-md-12">
-            <codemirror style="min-height:500px !important; box-sizing: border-box" v-model="rawResponseData" :options="editorOptions"></codemirror>
-            <!--<textarea readonly style="min-height:500px !important; box-sizing: border-box" v-model="rawResponseData" placeholder="response here" class="form-control"  id="comment"></textarea>-->
+            <codemirror style="min-height:500px !important; box-sizing: border-box" v-model="data" :options="editorOptions"></codemirror>
         </div>
     </div>
 </template>
@@ -10,6 +9,7 @@
 <script>
     import { codemirror, CodeMirror } from 'vue-codemirror'
     export default {
+        props:['data'],
         data() {
             return {
                 editorOptions: {

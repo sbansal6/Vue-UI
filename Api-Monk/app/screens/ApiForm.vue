@@ -2,7 +2,7 @@
     <div>
         <div class="row form-group">
             <div class="col-md-1">
-                <select id="select" class="form-control" style="width: 100%">
+                <select v-model="mode" id="select" class="form-control" style="width: 100%">
                 <option>GET</option>
                 <option>POST</option>
                 <option>PUT</option>
@@ -17,15 +17,15 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-8">
-                 <div class="row form-group">
+            <div id="parts" class="col-md-8">
+                <div class="row form-group">
                      <ul class="nav nav-pills">
                          <li :class=""><a @click.prevent="" >Query</a></li>
                          <li :class=""><a @click.prevent="">Header</a></li>
                          <li :class=""><a @click.prevent="">Body</a></li>
                      </ul>
                  </div>
-                <div class="row form-group">
+                <div id="features" class="row form-group">
                     <ul class="nav nav-pills">
                         <li :class="rawGridClass"><a @click.prevent="rawGridSelected" >Raw</a></li>
                         <li :class="flatGridClass"><a @click.prevent="flatGridSelected">Flat</a></li>
@@ -52,46 +52,62 @@
 
             </div>
         </div>
-        <raw-grid v-if="rawGrid"></raw-grid>
-        <table-grid v-if="flatGrid"></table-grid>
+        <raw-grid :data="data" v-if="rawGrid"></raw-grid>
+        <table-grid :data="data" v-if="flatGrid"></table-grid>
     </div>
 
 </template>
 
 <script>
-    import axios from 'axios'
     import RawGrid from '../components/RawGrid.vue'
     import TableGrid from '../components/TableGrid.vue'
     import Spinner from 'vue-simple-spinner'
+    import taffy from '../services/taffy'
+    import axios from 'axios'
 
+    /**
+     * ApiForm Screen.
+     * Can have multiple instances of screen, directly proportional to tab
+     */
     export default {
         data : function(){
             return {
+                request:{
+                    url : "",
+                },
+                response:{
+                    status: undefined,
+                    statusText: undefined,
+                    data:undefined
+                },
                 url : "",
-                text: "",
+                data: "",
                 status: undefined,
                 statusText: undefined,
-                show:false
+                show: false,
+                features: {
+
+                },
+                mode:'GET'
             }
         },
         methods : {
             onGo:function () {
                 const self  = this;
                 if(this.url.length > 0){
-                    axios.get(this.url)
-                            .then(function (response) {
-                                console.log(JSON.stringify(response))
-                                self.$store.commit('setApiResponse',response)
+                    taffy.go(this.mode,this.url,null,{})
+                        .then(
+                            function(response){
                                 self.status = response.status
                                 self.statusText = response.statusText
-                                self.text = JSON.stringify(response.data,null,4)
-                            })
-                            .catch(function (error) {
-                                console.log('onGo error',error)
-//                              self.text = JSON.stringify(error.response.data,null,4)
-//                              self.status = JSON.stringify(error.response.status)
-//                              self.statusText = JSON.stringify(error.response.statusText)
-                            });
+                                self.data = JSON.stringify(response.data,null,4)
+                            }
+                        )
+                        .catch(function(error){
+                                self.text = JSON.stringify(error.response.data,null,4)
+                                self.status = JSON.stringify(error.response.status)
+                                self.statusText = JSON.stringify(error.response.statusText)
+                        })
                 }
             },
             rawGridSelected:function(){
@@ -99,12 +115,28 @@
             },
             flatGridSelected:function(){
                 this.$store.commit('setGridFlat')
+            },
+            feature: {
+                rawSelected:function(){
+
+                },
+                flatSelected: function(){
+
+                },
+                sqlSelected: function(){
+
+                },
+                chartSelected: function(){
+
+                }
             }
         },
         computed :{
+            data() {
+                this.data
+            },
             formattedStatus() {
-                console.log('values',this.$store.state.apiResponse.status,this.$store.state.apiResponse.statusText)
-                if (this.status && this.statusText){
+                 if (this.status && this.statusText){
                     return `${this.status} ${this.statusText}`
                 }
 
