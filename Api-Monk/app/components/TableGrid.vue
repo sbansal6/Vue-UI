@@ -21,8 +21,7 @@
         props:['data'],
         computed:{
             dataFlattened(){
-                console.log(typeof this.data)
-                return csvjson.toObject(parseJson(JSON.parse(this.data)),csvOptions)
+                return csvjson.toObject(parseJson(this.data),csvOptions)
             },
             columns() {
                 const columns = []

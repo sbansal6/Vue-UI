@@ -40,11 +40,11 @@
                         <tbody>
                         <tr>
                             <td>Status</td>
-                            <td>200</td>
+                            <td>{{status}}</td>
                         </tr>
                         <tr>
                             <td>StatusText</td>
-                            <td>Ok</td>
+                            <td>{{statusText}}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -81,7 +81,7 @@
                     data:undefined
                 },
                 url : "",
-                data: "",
+                data: undefined,
                 status: undefined,
                 statusText: undefined,
                 show: false,
@@ -100,7 +100,7 @@
                             function(response){
                                 self.status = response.status
                                 self.statusText = response.statusText
-                                self.data = JSON.stringify(response.data,null,4)
+                                self.data = response.data
                             }
                         )
                         .catch(function(error){
@@ -132,14 +132,8 @@
             }
         },
         computed :{
-            data() {
-                this.data
-            },
-            formattedStatus() {
-                 if (this.status && this.statusText){
-                    return `${this.status} ${this.statusText}`
-                }
-
+            rawData() {
+                return this.data
             },
             rawGrid(){
                 return this.$store.state.grid.raw

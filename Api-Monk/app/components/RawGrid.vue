@@ -1,7 +1,7 @@
 <template>
     <div class="row form-group">
         <div class="col-md-12">
-            <codemirror style="min-height:500px !important; box-sizing: border-box" v-model="data" :options="editorOptions"></codemirror>
+            <codemirror style="min-height:500px !important; box-sizing: border-box" v-model="rawData" :options="editorOptions"></codemirror>
         </div>
     </div>
 </template>
@@ -25,9 +25,9 @@
             }
         },
         computed: {
-            rawResponseData() {
-                return JSON.stringify(this.$store.state.apiResponse.rawResponseData,null,4)
-            }
+           rawData(){
+               return JSON.stringify(this.data,null,4)
+           }
         },
         components :{
             codemirror

@@ -12,8 +12,19 @@ const is = require('is');
  * objects that are array , and items of array are objects need to be in this unwinded array
  */
 function parseProperties(data){
+
     const fields = []
     const unwind = []
+
+    if (is.string(data)){
+        try {
+            data = JSON.parse(JSON.stringify(data))
+        }
+        catch(err) {
+            throw new Error("Cannot convert to valid json object")
+        }
+
+    }
 
     // data can be of type object or array
     if (is.object(data)){
