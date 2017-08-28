@@ -3,10 +3,10 @@
         <div class="row form-group">
             <div class="col-md-1">
                 <select v-model="mode" id="select" class="form-control" style="width: 100%">
-                <option>GET</option>
-                <option>POST</option>
-                <option>PUT</option>
-                <option>DELETE</option>
+                    <option>GET</option>
+                    <option>POST</option>
+                    <option>PUT</option>
+                    <option>DELETE</option>
                 </select>
             </div>
             <div class="col-md-10">
@@ -19,18 +19,19 @@
         <div class="form-group">
             <div id="parts" class="col-md-8">
                 <div class="row form-group">
-                     <ul class="nav nav-pills">
-                         <li :class=""><a @click.prevent="" >Query</a></li>
-                         <li :class=""><a @click.prevent="">Header</a></li>
-                         <li :class=""><a @click.prevent="">Body</a></li>
-                     </ul>
-                 </div>
+                    <ul class="nav nav-pills">
+                        <li :class=""><a @click.prevent="" >Query</a></li>
+                        <li :class=""><a @click.prevent="">Header</a></li>
+                        <li :class=""><a @click.prevent="">Body</a></li>
+                    </ul>
+                </div>
                 <div id="features" class="row form-group">
                     <ul class="nav nav-pills">
                         <li :class="rawGridClass"><a @click.prevent="rawGridSelected" >Raw</a></li>
                         <li :class="flatGridClass"><a @click.prevent="flatGridSelected">Flat</a></li>
                         <li :class=""><a @click.prevent="">Sql</a></li>
                         <li :class=""><a @click.prevent="">Charts</a></li>
+                        <li :class=""><a @click.prevent="openTheModal()"><span class="glyphicon glyphicon-cog"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -54,6 +55,8 @@
         </div>
         <raw-grid :data="data" v-if="rawGrid"></raw-grid>
         <table-grid :data="data" v-if="flatGrid"></table-grid>
+        <setting></setting>
+
     </div>
 
 </template>
@@ -61,9 +64,12 @@
 <script>
     import RawGrid from '../components/RawGrid.vue'
     import TableGrid from '../components/TableGrid.vue'
+    import Setting from '../components/Setting.vue'
     import Spinner from 'vue-simple-spinner'
     import taffy from '../services/taffy'
     import axios from 'axios'
+//    const sql = require('sql.js');
+//    var db = new sql.Database();
 
     /**
      * ApiForm Screen.
@@ -88,7 +94,9 @@
                 features: {
 
                 },
-                mode:'GET'
+                mode:'GET',
+                showModal: true,
+                settingState:true
             }
         },
         methods : {
@@ -104,9 +112,9 @@
                             }
                         )
                         .catch(function(error){
-                                self.text = JSON.stringify(error.response.data,null,4)
-                                self.status = JSON.stringify(error.response.status)
-                                self.statusText = JSON.stringify(error.response.statusText)
+                            self.text = JSON.stringify(error.response.data,null,4)
+                            self.status = JSON.stringify(error.response.status)
+                            self.statusText = JSON.stringify(error.response.statusText)
                         })
                 }
             },
@@ -116,19 +124,8 @@
             flatGridSelected:function(){
                 this.$store.commit('setGridFlat')
             },
-            feature: {
-                rawSelected:function(){
-
-                },
-                flatSelected: function(){
-
-                },
-                sqlSelected: function(){
-
-                },
-                chartSelected: function(){
-
-                }
+            openTheModal:function(){
+                this.$modal.show('hello-world');
             }
         },
         computed :{
@@ -153,7 +150,7 @@
             }
         },
         components :{
-            RawGrid,TableGrid,Spinner
+            RawGrid,TableGrid,Spinner,Setting
         },
         mounted(){
             this.$refs.input.focus();
