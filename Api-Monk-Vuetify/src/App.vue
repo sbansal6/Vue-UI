@@ -26,7 +26,7 @@
             <v-toolbar-side-icon light @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
             <v-toolbar-title>Api-Monk</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn light icon @click.native.stop="openGithub()">
+            <v-btn light icon @click.native.stop="">
                 <v-icon>home</v-icon>
             </v-btn>
         </v-toolbar>
@@ -36,7 +36,7 @@
             </v-fade-transition>
         </main>
         <v-footer class="indigo">
-            <span>© 2017 - Api-Mink</span>
+            <span>© 2017 - Api-Monk</span>
         </v-footer>
     </v-app>
 </template>
@@ -47,17 +47,20 @@
     data () {
       return {
         drawer: true,
-        items: [{
+        items: [
+            {
           href: 'home',
           router: true,
           title: 'Home',
           icon: 'home',
-        }, {
+        },
+            {
           href: 'examples',
           router: true,
           title: 'Example',
           icon: 'extension',
-        }, {
+        },
+            {
           href: 'about',
           router: true,
           title: 'About',
