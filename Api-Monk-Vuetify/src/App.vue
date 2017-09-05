@@ -10,7 +10,7 @@
                     </v-list-tile-content>
                 </v-list-tile>
                 <v-divider></v-divider>
-                <v-list-item v-for="item in items" :key="item">
+                <v-list v-for="item in items" :key="item">
                     <v-list-tile :href="item.href" :router="item.router">
                         <v-list-tile-action>
                             <v-icon light v-html="item.icon"></v-icon>
@@ -19,7 +19,7 @@
                             <v-list-tile-title v-html="item.title"></v-list-tile-title>
                         </v-list-tile-content>
                     </v-list-tile>
-                </v-list-item>
+                </v-list>
             </v-list>
         </v-navigation-drawer>
         <v-toolbar class="indigo">

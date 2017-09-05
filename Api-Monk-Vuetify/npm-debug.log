@@ -1,14 +1,14 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'dev' ]
 2 info using npm@3.10.10
-3 info using node@v4.8.0
+3 info using node@v6.11.0
 4 verbose run-script [ 'predev', 'dev', 'postdev' ]
 5 info lifecycle vuetify-webpack-simple@~predev: vuetify-webpack-simple@
 6 silly lifecycle vuetify-webpack-simple@~predev: no script for predev, continuing
 7 info lifecycle vuetify-webpack-simple@~dev: vuetify-webpack-simple@
 8 verbose lifecycle vuetify-webpack-simple@~dev: unsafe-perm in lifecycle true
-9 verbose lifecycle vuetify-webpack-simple@~dev: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/sbansal/Desktop/personal-workspace/Vue-UI/template/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/bin:/bin
-10 verbose lifecycle vuetify-webpack-simple@~dev: CWD: /Users/sbansal/Desktop/personal-workspace/Vue-UI/template
+9 verbose lifecycle vuetify-webpack-simple@~dev: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/sbansal/Desktop/personal-workspace/Vue-UI/Api-Monk-Vuetify/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/bin:/bin
+10 verbose lifecycle vuetify-webpack-simple@~dev: CWD: /Users/sbansal/Desktop/personal-workspace/Vue-UI/Api-Monk-Vuetify
 11 silly lifecycle vuetify-webpack-simple@~dev: Args: [ '-c',
 11 silly lifecycle   'cross-env NODE_ENV=development webpack-dev-server --public 192.168.33.99:8081 --open --inline --hot --host=0.0.0.0 --port=8081' ]
 12 silly lifecycle vuetify-webpack-simple@~dev: Returned: code: 1  signal: null
@@ -16,18 +16,18 @@
 14 verbose stack Error: vuetify-webpack-simple@ dev: `cross-env NODE_ENV=development webpack-dev-server --public 192.168.33.99:8081 --open --inline --hot --host=0.0.0.0 --port=8081`
 14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
 14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
-14 verbose stack     at emitTwo (events.js:87:13)
-14 verbose stack     at ChildProcess.emit (events.js:172:7)
-14 verbose stack     at maybeClose (internal/child_process.js:854:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:222:5)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:891:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid vuetify-webpack-simple@
-16 verbose cwd /Users/sbansal/Desktop/personal-workspace/Vue-UI/template
+16 verbose cwd /Users/sbansal/Desktop/personal-workspace/Vue-UI/Api-Monk-Vuetify
 17 error Darwin 16.4.0
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "dev"
-19 error node v4.8.0
+19 error node v6.11.0
 20 error npm  v3.10.10
 21 error code ELIFECYCLE
 22 error vuetify-webpack-simple@ dev: `cross-env NODE_ENV=development webpack-dev-server --public 192.168.33.99:8081 --open --inline --hot --host=0.0.0.0 --port=8081`
