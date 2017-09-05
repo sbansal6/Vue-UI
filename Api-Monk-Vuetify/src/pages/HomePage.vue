@@ -87,6 +87,33 @@
           <div ui buttons>
               <v-btn flat>Raw</v-btn>
               <v-btn flat>Flat</v-btn>
+              <v-dialog v-model="settingsDialog" lazy absolute>
+                  <v-btn icon class="primary--text" slot="activator">
+                      <v-icon>settings</v-icon>
+                  </v-btn>
+                  <v-card>
+                      <v-card-title>
+                          <span class="headline">Settings</span>
+                      </v-card-title>
+                      <v-card-text>
+                          <v-select
+                                  label="Data"
+                                  required
+                                  :items="['0-17', '18-29', '30-54', '54+']"
+                          ></v-select>
+                          <v-select
+                                  label="Pagination"
+                                  required
+                                  :items="['0-17', '18-29', '30-54', '54+']"
+                          ></v-select>
+                      </v-card-text>
+                      <v-card-actions>
+                          <v-spacer></v-spacer>
+                          <v-btn class="blue--text darken-1" flat @click.native="settingsDialog = false">Close</v-btn>
+                          <v-btn class="blue--text darken-1" flat @click.native="settingsDialog = false">Save</v-btn>
+                      </v-card-actions>
+                  </v-card>
+              </v-dialog>
           </div>
         </v-layout>
 
@@ -97,7 +124,7 @@
                         textarea
                         dark
                         multi-line
-                        border
+                        border-solid
                 ></v-text-field>
             </v-flex>
         </v-layout>
@@ -119,9 +146,10 @@
           queryDialog:false,
           headerDialog:false,
           bodyDialog: false,
-          dialog: false,
+          settingsDialog: false,
       }
     },
+      // for spinner
       watch: {
           loader () {
               const l = this.loader
