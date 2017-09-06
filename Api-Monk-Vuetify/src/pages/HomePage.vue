@@ -14,6 +14,7 @@
             </v-flex>
             <v-flex xs10>
                 <v-text-field
+                        v-model="url"
                         name="input-1-3"
                         label="http://api.com"
                         single-line
@@ -24,7 +25,7 @@
                 <v-btn bottom
                         info
                         :loading="loading4"
-                        @click.native="loader = 'loading4'"
+                        @click.native="onGo"
                         :disabled="loading4"
                 >Go
                     <span slot="loader" class="custom-loader">
@@ -119,13 +120,7 @@
 
         <v-layout row wrap>
             <v-flex xs12>
-                <v-text-field
-                        name="input-1"
-                        textarea
-                        dark
-                        multi-line
-                        border-solid
-                ></v-text-field>
+                <codemirror style="min-height:500px !important; box-sizing: border-box" v-model="rawData" :options="editorOptions"></codemirror>
             </v-flex>
         </v-layout>
 
@@ -133,37 +128,80 @@
 </template>
 
 <script>
-  const METHODS = [
+  import taffy from '../services/taffy'
+  import { codemirror, CodeMirror } from 'vue-codemirror'
+  const REST_METHODS = [
       "GET","POST"
   ]
   export default {
     data () {
       return {
-          "methods":METHODS,
-          "methodDefault":METHODS[0],
-          loader: null,
+          url:"",
+          methods:REST_METHODS,
+          methodDefault:REST_METHODS[0],
+          loader: false,
           loading4: false,
           queryDialog:false,
           headerDialog:false,
           bodyDialog: false,
           settingsDialog: false,
+          data:"Sample Data",
+          editorOptions: {
+              // codemirror options
+              tabSize: 4,
+              mode: 'text/javascript',
+              theme: 'Base16-Light',
+              lineNumbers: true,
+              line: true,
+              readOnly:true
+
+          }
       }
     },
-      // for spinner
-      watch: {
-          loader () {
-              const l = this.loader
-              this[l] = !this[l]
-              setTimeout(() => (this[l] = false), 3000)
-              this.loader = null
-          }
-      },
     mounted () {
-    }
+    },
+    methods :{
+        onGo:function () {
+            const self = this
+            if(this.url.length > 0){
+                this.loading4 = true
+                taffy.go('GET',this.url,null,{})
+                        .then(
+                                function(response){
+                                    console.log(response)
+//                                    self.status = response.status
+//                                    self.statusText = response.statusText
+                                    self.data = response.data
+                                    self.loading4  = false
+                                }
+                        )
+                        .catch(function(error){
+                            console.log(error)
+//                            self.text = JSON.stringify(error.response.data,null,4)
+//                            self.status = JSON.stringify(error.response.status)
+//                            self.statusText = JSON.stringify(error.response.statusText)
+                            self.loading4  = false
+                        })
+            }
+        },
+    },
+    computed: {
+        rawData() {
+            return JSON.stringify(this.data,null,4)
+        },
+    },
+      components :{
+          codemirror
+      }
   }
 </script>
 
 <style>
+    .CodeMirror {
+        border: 1px solid #eee;
+        min-height: 600px;
+        max-height: 600px;
+    }
     .custom-loader {
         animation: loader 1s infinite;
         display: flex;
