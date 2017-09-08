@@ -89,7 +89,8 @@
             <v-flex xs12>
                 <div ui buttons>
                     <v-btn-toggle v-model="toggle_exclusive">
-                        <v-btn flat>Raw</v-btn>
+                        <v-btn flat>Text</v-btn>
+                        <v-btn flat>JSON</v-btn>
                         <v-btn flat>Flat</v-btn>
                         <v-btn flat>Sql</v-btn>
                         <v-btn flat>Charts</v-btn>
