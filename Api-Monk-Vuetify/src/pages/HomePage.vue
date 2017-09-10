@@ -126,21 +126,7 @@
                 </div>
             </v-flex>
             <v-flex xs5>
-                <v-dialog v-model="responseDialog" lazy absolute class="right aligned">
-                    <!--<v-alert slot="activator" success value="true">-->
-                        <!--This is a success alert.-->
-                    <!--</v-alert>-->
-                    <v-chip slot="activator">
-                        <v-avatar class="teal">{{status}}</v-avatar>
-                        {{statusHint}}
-                    </v-chip>
-                    <v-card>
-                        <v-card-title>
-                            <div class="headline">Response</div>
-                        </v-card-title>
-                        <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
-                    </v-card>
-                </v-dialog>
+                <response-bar :response="response"></response-bar>
             </v-flex>
 
         </v-layout>
@@ -168,6 +154,8 @@
   import taffy from '../services/taffy'
   import RawGrid from '../components/RawGrid.vue'
   import FlatGrid from '../components/FlatGrid.vue'
+  import ResponseBar from '../components/ResponseBar.vue'
+
   const is = require('is');
   const REST_METHODS = [
       "GET","POST"
@@ -190,9 +178,7 @@
           statusText:undefined,
           ex11: false,
           toggle_exclusive: 0,
-          response:undefined,
-          responseDialog:false,
-
+          response:undefined
       }
     },
     mounted () {
@@ -205,6 +191,7 @@
                 taffy.go('GET',this.url,null,{})
                         .then(
                                 function(response){
+                                    console.log('headers',response.headers)
                                     self.response = response
                                     self.status = response.status
                                     self.statusText = response.statusText
@@ -228,16 +215,6 @@
         }
     },
     computed: {
-        status(){
-            if (this.response){
-                return this.response.status
-            }
-        },
-        statusHint(){
-            if (this.response){
-                return this.response["headers"]["content-type"]
-            }
-        },
         rawData() {
             return JSON.stringify(this.data,null,4)
         },
@@ -259,7 +236,7 @@
         }
     },
     components :{
-        RawGrid,FlatGrid
+        RawGrid,FlatGrid,ResponseBar
       }
   }
 </script>
