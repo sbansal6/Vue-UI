@@ -128,7 +128,6 @@
             <v-flex xs5>
                 <response-bar :response="response"></response-bar>
             </v-flex>
-
         </v-layout>
 
         <!--GRID COMPONENTS-->
@@ -142,7 +141,7 @@
         <!--flat grid-->
         <v-layout row wrap >
             <v-flex xs12>
-                <flat-grid v-if="flatGrid" :data="data"></flat-grid>
+                <flat-grid v-if="flatGrid" :response="response"></flat-grid>
             </v-flex>
         </v-layout>
         <!--END GRID COMPONENTS-->
@@ -173,12 +172,11 @@
           headerDialog:false,
           bodyDialog: false,
           parseDialog: false,
-          data:undefined,
-          status:undefined,
-          statusText:undefined,
           ex11: false,
           toggle_exclusive: 0,
-          response:undefined
+          response:undefined,
+          dataKey:undefined,
+          paginationKey:undefined
       }
     },
     mounted () {
@@ -191,11 +189,7 @@
                 taffy.go('GET',this.url,null,{})
                         .then(
                                 function(response){
-                                    console.log('headers',response.headers)
                                     self.response = response
-                                    self.status = response.status
-                                    self.statusText = response.statusText
-                                    self.data = response.data
                                     self.loading4  = false
                                 }
                         )
@@ -221,7 +215,6 @@
         dataProperties() {
             let properties = []
             if (is.object(this.data)){
-                console.log('here')
                 for (let key in this.data){
                     properties.push(key)
                 }

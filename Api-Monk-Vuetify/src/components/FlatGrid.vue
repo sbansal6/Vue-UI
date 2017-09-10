@@ -2,12 +2,11 @@
     <!--http://www.rent-a-hero.de/wp/wp-content/uploads/2017/04/vuegrid/#/-->
     <div>
         <vuetable ref="vuetable"
-                  :data="dataFlattened.data"
-                  :fields="columns"
+                  :data="tableData.data"
+                  :fields="tableData.columns"
                   :api-mode="false"
         ></vuetable>
     </div>
-
 </template>
 
 <script>
@@ -19,22 +18,22 @@
         delimiter : ',', // optional
         quote     : '"', // optional
     };
+
     export default {
-        props:['data'],
+        props:['response','dataKey','paginationKey'],
         computed:{
-            dataFlattened(){
-                //console.log('data',JSON.stringify(csvjson.toObject(parseJson(this.data),csvOptions),null,4))
-                return this.data
-            },
-            columns() {
-                const columns = []
-                for (let key in this.dataFlattened[0]) {
-                    columns.push(key)
+            tableData(){
+              const tableObject = {
+                  data:undefined,
+                  columns:[]
+              }
+                if (this.response.data){
+                    tableObject["data"] = this.response.data
+                    for (let key in this.response.data[0]) {
+                        tableObject["columns"].push(key)
+                    }
                 }
-                console.log('columns',JSON.stringify(columns,null,4))
-                return [
-                   "id"
-                ]
+                return tableObject
             }
         },
         components: {
