@@ -1,3 +1,6 @@
+<!--Displays Raw text response from api-->
+<!--** if api response content type is json then convert it into json-->
+
 <template>
     <codemirror style="min-height:500px !important; box-sizing: border-box" v-model="rawData" :options="editorOptions"></codemirror>
 </template>
@@ -5,13 +8,13 @@
 <script>
   import { codemirror, CodeMirror } from 'vue-codemirror'
   export default {
-      props:['data'],
+      props:['response'],
       data() {
           return {
               editorOptions: {
                   // codemirror options
-                  tabSize: 4,
-                  mode: 'text/javascript',
+                  //tabSize: 4,
+                  //mode: 'text/javascript',
                   theme: 'base16-dark',
                   lineNumbers: true,
                   line: true,
@@ -22,7 +25,13 @@
       },
       computed: {
           rawData(){
-              return JSON.stringify(this.data,null,4)
+              if (this.response){
+                  if(this.response.headers["content-type"].includes('json')){
+                      return JSON.stringify(this.response.data,null,2)
+                  } else {
+                      return this.response.data
+                  }
+              }
           }
       },
       components :{

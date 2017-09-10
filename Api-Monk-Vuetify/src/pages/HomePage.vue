@@ -86,11 +86,10 @@
 
         <!--grids button-->
         <v-layout row wrap>
-            <v-flex xs12>
+            <v-flex xs7>
                 <div ui buttons>
                     <v-btn-toggle v-model="toggle_exclusive">
-                        <v-btn flat>Text</v-btn>
-                        <v-btn flat>JSON</v-btn>
+                        <v-btn flat>Raw</v-btn>
                         <v-btn flat>Flat</v-btn>
                         <v-btn flat>Sql</v-btn>
                         <v-btn flat>Charts</v-btn>
@@ -126,6 +125,23 @@
                     </v-dialog>
                 </div>
             </v-flex>
+            <v-flex xs5>
+                <v-dialog v-model="responseDialog" lazy absolute class="right aligned">
+                    <!--<v-alert slot="activator" success value="true">-->
+                        <!--This is a success alert.-->
+                    <!--</v-alert>-->
+                    <v-chip slot="activator">
+                        <v-avatar class="teal">{{status}}</v-avatar>
+                        {{statusHint}}
+                    </v-chip>
+                    <v-card>
+                        <v-card-title>
+                            <div class="headline">Response</div>
+                        </v-card-title>
+                        <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
+                    </v-card>
+                </v-dialog>
+            </v-flex>
 
         </v-layout>
 
@@ -133,7 +149,7 @@
         <!--raw grid-->
         <v-layout row wrap>
             <v-flex xs12>
-                <raw-grid v-if="rawGrid" :data="data"></raw-grid>
+                <raw-grid v-if="rawGrid" :response="response"></raw-grid>
             </v-flex>
         </v-layout>
 
@@ -173,7 +189,10 @@
           status:undefined,
           statusText:undefined,
           ex11: false,
-          toggle_exclusive: 0
+          toggle_exclusive: 0,
+          response:undefined,
+          responseDialog:false,
+
       }
     },
     mounted () {
@@ -186,13 +205,14 @@
                 taffy.go('GET',this.url,null,{})
                         .then(
                                 function(response){
+                                    self.response = response
                                     self.status = response.status
                                     self.statusText = response.statusText
                                     self.data = response.data
                                     self.loading4  = false
                                 }
                         )
-                        .catch(function(error){ß
+                        .catch(function(error){
                             self.data = JSON.stringify(error.response.data,null,4)
                             self.status = JSON.stringify(error.response.status)
                             self.statusText = JSON.stringify(error.response.statusText)
@@ -200,12 +220,24 @@
                         })
             }
         },
+        onResponseDialog() {
+            this.responseDialog = true
+        },
         onParseSave:function(){
             this.parseDialog = false
-
         }
     },
     computed: {
+        status(){
+            if (this.response){
+                return this.response.status
+            }
+        },
+        statusHint(){
+            if (this.response){
+                return this.response["headers"]["content-type"]
+            }
+        },
         rawData() {
             return JSON.stringify(this.data,null,4)
         },
