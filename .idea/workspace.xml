@@ -24,11 +24,12 @@
       <file leaf-file-name="FlatGrid.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="50" />
+            <state relative-caret-position="0">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#500#581#0" expanded="false" />
                 <element signature="e#673#1122#0" expanded="false" />
+                <element signature="e#1141#2402#0" expanded="false" />
                 <element signature="e#1165#1781#0" expanded="false" />
                 <element signature="e#1803#2392#0" expanded="false" />
                 <element signature="e#2424#2456#0" expanded="false" />
@@ -37,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomePage.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sampleData.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/sampleData.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePage.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/pages/HomePage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="145" column="25" lean-forward="true" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
+            <state relative-caret-position="-214">
+              <caret line="144" column="26" lean-forward="false" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
               <folding>
                 <element signature="n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
@@ -49,6 +60,8 @@
                 <element signature="n#v-flex#2;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-layout#1;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-layout#2;n#v-container#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#3;n#v-container#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#4;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="e#7238#7275#0" expanded="true" />
                 <element signature="e#7539#7897#0" expanded="false" />
                 <element signature="e#8461#9279#0" expanded="false" />
@@ -168,11 +181,11 @@
         <option value="$PROJECT_DIR$/Api-Monk-Vuetify/webpack.config.js" />
         <option value="$PROJECT_DIR$/Api-Monk-Vuetify/index.html" />
         <option value="$PROJECT_DIR$/Api-Monk-Vuetify/src/components/RawGrid.vue" />
-        <option value="$PROJECT_DIR$/Api-Monk-Vuetify/sampleData.txt" />
         <option value="$PROJECT_DIR$/Api-Monk-Vuetify/src/components/ResponseChip.vue" />
         <option value="$PROJECT_DIR$/Api-Monk-Vuetify/src/components/ResponseBar.vue" />
         <option value="$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue" />
         <option value="$PROJECT_DIR$/Api-Monk-Vuetify/src/pages/HomePage.vue" />
+        <option value="$PROJECT_DIR$/Api-Monk-Vuetify/sampleData.txt" />
       </list>
     </option>
   </component>
@@ -237,68 +250,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Api-Monk-Vuetify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue-UI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue-UI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api-Monk-Vuetify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue-UI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue-UI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api-Monk-Vuetify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue-UI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vue-UI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api-Monk-Vuetify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -511,19 +462,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184500000" />
+    <option name="totallyTimeSpent" value="184707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="621" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18824464" sideWeight="0.4953765" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18824464" sideWeight="0.4953765" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.491404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22508961" sideWeight="0.4953765" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27977315" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42911154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19283155" sideWeight="0.50462353" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -898,14 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/sampleData.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/ResponseBar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -921,24 +864,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="50" />
-          <folding>
-            <element signature="e#500#581#0" expanded="false" />
-            <element signature="e#673#1122#0" expanded="false" />
-            <element signature="e#1165#1781#0" expanded="false" />
-            <element signature="e#1803#2392#0" expanded="false" />
-            <element signature="e#2424#2456#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/pages/HomePage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="145" column="25" lean-forward="true" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
+        <state relative-caret-position="-214">
+          <caret line="144" column="26" lean-forward="false" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
           <folding>
             <element signature="n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
@@ -946,6 +875,8 @@
             <element signature="n#v-flex#2;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-layout#1;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-layout#2;n#v-container#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#3;n#v-container#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#4;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="e#7238#7275#0" expanded="true" />
             <element signature="e#7539#7897#0" expanded="false" />
             <element signature="e#8461#9279#0" expanded="false" />
@@ -957,6 +888,29 @@
             <element signature="e#10527#10573#0" expanded="false" />
             <element signature="n#style#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#500#581#0" expanded="false" />
+            <element signature="e#673#1122#0" expanded="false" />
+            <element signature="e#1141#2402#0" expanded="false" />
+            <element signature="e#1165#1781#0" expanded="false" />
+            <element signature="e#1803#2392#0" expanded="false" />
+            <element signature="e#2424#2456#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/sampleData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

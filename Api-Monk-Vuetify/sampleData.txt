@@ -1,3 +1,8 @@
 https://jsonplaceholder.typicode.com/posts
 
 https://api.mysocialpixel.com/accounts/91232/audiences?key=ueCgFzLvMDBVObkbAO3IYcINQX9ImTl8
+
+todo:
+1) Flaten out data, need to provide nested fields name to vtable
+2) provided nest properties to parseProperties grid
+cla
