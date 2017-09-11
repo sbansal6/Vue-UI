@@ -24,8 +24,8 @@
       <file leaf-file-name="FlatGrid.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="-170">
+              <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="31" />
               <folding>
                 <element signature="e#500#581#0" expanded="false" />
                 <element signature="e#666#1115#0" expanded="false" />
@@ -36,39 +36,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sampleData.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/sampleData.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HomePage.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/pages/HomePage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="182" column="16" lean-forward="true" selection-start-line="182" selection-start-column="16" selection-end-line="182" selection-end-column="16" />
+            <state relative-caret-position="132">
+              <caret line="219" column="77" lean-forward="false" selection-start-line="219" selection-start-column="77" selection-end-line="219" selection-end-column="77" />
               <folding>
                 <element signature="n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-flex#1;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-flex#2;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-layout#1;n#v-container#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#2;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-layout#3;n#v-container#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#v-layout#4;n#v-container#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#7089#7126#0" expanded="true" />
-                <element signature="e#7895#9061#0" expanded="false" />
-                <element signature="e#7922#8740#0" expanded="false" />
-                <element signature="e#8772#8853#0" expanded="false" />
-                <element signature="e#8877#9055#0" expanded="false" />
-                <element signature="e#9097#9160#0" expanded="false" />
-                <element signature="e#9187#9500#0" expanded="false" />
-                <element signature="e#9592#10148#0" expanded="false" />
-                <element signature="e#10166#10658#0" expanded="false" />
-                <element signature="e#10682#10728#0" expanded="false" />
+                <element signature="e#7167#7204#0" expanded="true" />
+                <element signature="e#7877#8315#0" expanded="false" />
+                <element signature="e#8387#9205#0" expanded="false" />
+                <element signature="e#9617#9795#0" expanded="false" />
+                <element signature="e#9946#10009#0" expanded="false" />
+                <element signature="e#10036#10349#0" expanded="false" />
+                <element signature="e#10368#10421#0" expanded="false" />
+                <element signature="e#10441#10997#0" expanded="false" />
+                <element signature="e#11015#11548#0" expanded="false" />
+                <element signature="e#11572#11618#0" expanded="false" />
                 <element signature="n#style#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -114,6 +104,7 @@
       <find>click</find>
       <find>onResponseDialog</find>
       <find>toggle_exclusive</find>
+      <find>destr</find>
     </findStrings>
     <replaceStrings>
       <replace>grid_toggle</replace>
@@ -520,19 +511,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178838000" />
+    <option name="totallyTimeSpent" value="183800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="621" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18824464" sideWeight="0.4953765" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18824464" sideWeight="0.4953765" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.491404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22508961" sideWeight="0.4953765" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17580341" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27977315" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19283155" sideWeight="0.50462353" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -570,7 +561,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -907,19 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding>
-            <element signature="e#500#581#0" expanded="false" />
-            <element signature="e#666#1115#0" expanded="false" />
-            <element signature="e#1134#1145#0" expanded="false" />
-            <element signature="e#1167#1199#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/sampleData.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -943,28 +921,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="31" />
+          <folding>
+            <element signature="e#500#581#0" expanded="false" />
+            <element signature="e#666#1115#0" expanded="false" />
+            <element signature="e#1134#1145#0" expanded="false" />
+            <element signature="e#1167#1199#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/pages/HomePage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="182" column="16" lean-forward="true" selection-start-line="182" selection-start-column="16" selection-end-line="182" selection-end-column="16" />
+        <state relative-caret-position="132">
+          <caret line="219" column="77" lean-forward="false" selection-start-line="219" selection-start-column="77" selection-end-line="219" selection-end-column="77" />
           <folding>
             <element signature="n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-flex#1;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-flex#2;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-layout#1;n#v-container#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#2;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-layout#3;n#v-container#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#4;n#v-container#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#7089#7126#0" expanded="true" />
-            <element signature="e#7895#9061#0" expanded="false" />
-            <element signature="e#7922#8740#0" expanded="false" />
-            <element signature="e#8772#8853#0" expanded="false" />
-            <element signature="e#8877#9055#0" expanded="false" />
-            <element signature="e#9097#9160#0" expanded="false" />
-            <element signature="e#9187#9500#0" expanded="false" />
-            <element signature="e#9592#10148#0" expanded="false" />
-            <element signature="e#10166#10658#0" expanded="false" />
-            <element signature="e#10682#10728#0" expanded="false" />
+            <element signature="e#7167#7204#0" expanded="true" />
+            <element signature="e#7877#8315#0" expanded="false" />
+            <element signature="e#8387#9205#0" expanded="false" />
+            <element signature="e#9617#9795#0" expanded="false" />
+            <element signature="e#9946#10009#0" expanded="false" />
+            <element signature="e#10036#10349#0" expanded="false" />
+            <element signature="e#10368#10421#0" expanded="false" />
+            <element signature="e#10441#10997#0" expanded="false" />
+            <element signature="e#11015#11548#0" expanded="false" />
+            <element signature="e#11572#11618#0" expanded="false" />
             <element signature="n#style#0;n#!!top" expanded="false" />
           </folding>
         </state>

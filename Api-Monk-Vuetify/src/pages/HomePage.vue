@@ -130,6 +130,7 @@
             </v-flex>
         </v-layout>
 
+        <v-btn flat @click.stop="destroy">Destroy</v-btn>
         <!--GRID COMPONENTS-->
         <!--raw grid-->
         <v-layout row wrap>
@@ -138,10 +139,12 @@
             </v-flex>
         </v-layout>
 
+
+
         <!--flat grid-->
         <v-layout row wrap >
             <v-flex xs12>
-                <flat-grid v-if="flatGrid" :response="response" :vColumns="vColumns" :vData="vData"></flat-grid>
+                <flat-grid ref="refFlatGrid" v-if="flatGrid" :response="response" :vColumns="vColumns" :vData="vData"></flat-grid>
             </v-flex>
         </v-layout>
         <!--END GRID COMPONENTS-->
@@ -160,7 +163,13 @@
       "GET","POST"
   ];
 
-  export default {
+  const dummyResponse = {
+      "data":[
+             {"id":"136","created_at":"2015-11-29T19:30:09+0000","type":"website","network_id":"6035445129950","name":"Marin Careers Audience","nb_users":"1600","rule":{"and":[{"or":[{"url":{"eq":"www.marinsoftware.com\/about-us\/careers"}}]}]},"pixel":"321"}
+      ],
+      "data2":[{"id":"136","created_at":"2015-11-29T19:30:09+0000"}]
+  }
+      export default {
     data () {
       return {
           url:"",
@@ -205,7 +214,12 @@
         onParseSave:function(){
             this.parseDialog = false
             this.flatGrid = true
-        },
+            if (this.$refs["refFlatGrid"]) {
+                this.$refs["refFlatGrid"]['vData'] = this.vData
+                this.$refs["refFlatGrid"]['vColumns'] = this.vColumns
+                this.$refs["refFlatGrid"].$refs['vuetable'].normalizeFields()
+            }
+            },
         showFlatGrid(){
           if (this.response && is.array(this.response.data)){
               this.flatGrid = true
@@ -213,6 +227,10 @@
               this.parseDialog = true
           }
 
+        },
+        destroy(){
+           this.response = {}
+           this.response["data"] = dummyResponse
         }
     },
     computed: {
@@ -261,6 +279,7 @@
                     data =  this.response.data[this.dataKey]
                 }
             }
+            console.log('new data',data)
             return data
         }
     },
