@@ -21,7 +21,7 @@
     };
 
     export default {
-        props:['response','vData','vColumns'],
+        props:['response','dataKey','paginationKey'],
         data(){
             return {
                 css :{
@@ -35,6 +35,37 @@
             }
         },
         computed:{
+            vColumns(){
+                let columns = []
+                if (this.response) {
+                    if (is.array(this.response.data)) {
+                        for (let key in this.response.data[0]) {
+                            columns.push(key)
+                        }
+                    }
+                    if (is.object(this.response.data) && this.dataKey && this.paginationKey){
+                        for (let key in this.response.data[this.dataKey][0]) {
+                            columns.push(key)
+                        }
+                    }
+                }
+                return columns
+            },
+            vData() {
+                let data = []
+                if (this.response) {
+                    if (is.array(this.response.data)) {
+                        console.log('vdata Changed')
+                        data =  this.response.data
+                    }
+                    if (is.object(this.response.data) && this.dataKey && this.paginationKey){
+                        console.log('vdata Changed')
+                        data =  this.response.data[this.dataKey]
+                    }
+                }
+                console.log('new data',data)
+                return data
+            }
         },
         components: {
             Vuetable

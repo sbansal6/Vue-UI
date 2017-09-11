@@ -24,13 +24,14 @@
       <file leaf-file-name="FlatGrid.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="31" />
+            <state relative-caret-position="132">
+              <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="50" />
               <folding>
                 <element signature="e#500#581#0" expanded="false" />
-                <element signature="e#666#1115#0" expanded="false" />
-                <element signature="e#1134#1145#0" expanded="false" />
-                <element signature="e#1167#1199#0" expanded="false" />
+                <element signature="e#673#1122#0" expanded="false" />
+                <element signature="e#1165#1781#0" expanded="false" />
+                <element signature="e#1803#2392#0" expanded="false" />
+                <element signature="e#2424#2456#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -39,8 +40,8 @@
       <file leaf-file-name="HomePage.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/pages/HomePage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="219" column="77" lean-forward="false" selection-start-line="219" selection-start-column="77" selection-end-line="219" selection-end-column="77" />
+            <state relative-caret-position="87">
+              <caret line="145" column="25" lean-forward="true" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
               <folding>
                 <element signature="n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
@@ -48,17 +49,15 @@
                 <element signature="n#v-flex#2;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-layout#1;n#v-container#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#v-layout#2;n#v-container#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#v-layout#3;n#v-container#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#7167#7204#0" expanded="true" />
-                <element signature="e#7877#8315#0" expanded="false" />
-                <element signature="e#8387#9205#0" expanded="false" />
-                <element signature="e#9617#9795#0" expanded="false" />
-                <element signature="e#9946#10009#0" expanded="false" />
-                <element signature="e#10036#10349#0" expanded="false" />
-                <element signature="e#10368#10421#0" expanded="false" />
-                <element signature="e#10441#10997#0" expanded="false" />
-                <element signature="e#11015#11548#0" expanded="false" />
-                <element signature="e#11572#11618#0" expanded="false" />
+                <element signature="e#7238#7275#0" expanded="true" />
+                <element signature="e#7539#7897#0" expanded="false" />
+                <element signature="e#8461#9279#0" expanded="false" />
+                <element signature="e#9311#9533#0" expanded="false" />
+                <element signature="e#9559#9901#0" expanded="false" />
+                <element signature="e#9920#10010#0" expanded="false" />
+                <element signature="e#10114#10427#0" expanded="false" />
+                <element signature="e#10450#10503#0" expanded="false" />
+                <element signature="e#10527#10573#0" expanded="false" />
                 <element signature="n#style#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -105,6 +104,7 @@
       <find>onResponseDialog</find>
       <find>toggle_exclusive</find>
       <find>destr</find>
+      <find>flatGr</find>
     </findStrings>
     <replaceStrings>
       <replace>grid_toggle</replace>
@@ -511,7 +511,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183800000" />
+    <option name="totallyTimeSpent" value="184500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="621" extended-state="6" />
@@ -923,21 +923,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/components/FlatGrid.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="132">
+          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="50" />
           <folding>
             <element signature="e#500#581#0" expanded="false" />
-            <element signature="e#666#1115#0" expanded="false" />
-            <element signature="e#1134#1145#0" expanded="false" />
-            <element signature="e#1167#1199#0" expanded="false" />
+            <element signature="e#673#1122#0" expanded="false" />
+            <element signature="e#1165#1781#0" expanded="false" />
+            <element signature="e#1803#2392#0" expanded="false" />
+            <element signature="e#2424#2456#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Api-Monk-Vuetify/src/pages/HomePage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="219" column="77" lean-forward="false" selection-start-line="219" selection-start-column="77" selection-end-line="219" selection-end-column="77" />
+        <state relative-caret-position="87">
+          <caret line="145" column="25" lean-forward="true" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
           <folding>
             <element signature="n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-flex#0;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
@@ -945,17 +946,15 @@
             <element signature="n#v-flex#2;n#v-layout#0;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-layout#1;n#v-container#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#v-layout#2;n#v-container#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#3;n#v-container#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#7167#7204#0" expanded="true" />
-            <element signature="e#7877#8315#0" expanded="false" />
-            <element signature="e#8387#9205#0" expanded="false" />
-            <element signature="e#9617#9795#0" expanded="false" />
-            <element signature="e#9946#10009#0" expanded="false" />
-            <element signature="e#10036#10349#0" expanded="false" />
-            <element signature="e#10368#10421#0" expanded="false" />
-            <element signature="e#10441#10997#0" expanded="false" />
-            <element signature="e#11015#11548#0" expanded="false" />
-            <element signature="e#11572#11618#0" expanded="false" />
+            <element signature="e#7238#7275#0" expanded="true" />
+            <element signature="e#7539#7897#0" expanded="false" />
+            <element signature="e#8461#9279#0" expanded="false" />
+            <element signature="e#9311#9533#0" expanded="false" />
+            <element signature="e#9559#9901#0" expanded="false" />
+            <element signature="e#9920#10010#0" expanded="false" />
+            <element signature="e#10114#10427#0" expanded="false" />
+            <element signature="e#10450#10503#0" expanded="false" />
+            <element signature="e#10527#10573#0" expanded="false" />
             <element signature="n#style#0;n#!!top" expanded="false" />
           </folding>
         </state>

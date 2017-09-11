@@ -90,7 +90,7 @@
                 <div ui buttons>
                     <v-btn-toggle v-model="grid_toggle">
                         <v-btn flat>Raw</v-btn>
-                        <v-btn @click.stop="showFlatGrid" flat>Flat</v-btn>
+                        <v-btn @click.stop="onShowFlatGrid" flat>Flat</v-btn>
                         <v-btn flat>Sql</v-btn>
                         <v-btn flat>Charts</v-btn>
                     </v-btn-toggle>
@@ -130,21 +130,21 @@
             </v-flex>
         </v-layout>
 
+        <!--sample test button, delete after-->
         <v-btn flat @click.stop="destroy">Destroy</v-btn>
+
         <!--GRID COMPONENTS-->
         <!--raw grid-->
         <v-layout row wrap>
             <v-flex xs12>
-                <raw-grid v-if="rawGrid" :response="response"></raw-grid>
+                <raw-grid v-if="showRawGrid" :response="response"></raw-grid>
             </v-flex>
         </v-layout>
-
-
 
         <!--flat grid-->
         <v-layout row wrap >
             <v-flex xs12>
-                <flat-grid ref="refFlatGrid" v-if="flatGrid" :response="response" :vColumns="vColumns" :vData="vData"></flat-grid>
+                <flat-grid ref="refFlatGrid" v-if="showFlatGrid" :response="response" :dataKey="dataKey" :paginationKey="paginationKey"></flat-grid>
             </v-flex>
         </v-layout>
         <!--END GRID COMPONENTS-->
@@ -169,7 +169,8 @@
       ],
       "data2":[{"id":"136","created_at":"2015-11-29T19:30:09+0000"}]
   }
-      export default {
+
+    export default {
     data () {
       return {
           url:"",
@@ -186,7 +187,7 @@
           response:undefined,
           dataKey:undefined,
           paginationKey:undefined,
-          flatGrid:false
+          showFlatGrid:false
       }
     },
     mounted () {
@@ -213,17 +214,18 @@
         },
         onParseSave:function(){
             this.parseDialog = false
-            this.flatGrid = true
+            this.showFlatGrid = true
             if (this.$refs["refFlatGrid"]) {
-                this.$refs["refFlatGrid"]['vData'] = this.vData
-                this.$refs["refFlatGrid"]['vColumns'] = this.vColumns
                 this.$refs["refFlatGrid"].$refs['vuetable'].normalizeFields()
             }
-            },
-        showFlatGrid(){
+        },
+        onShowFlatGrid(){
+            // if response result is an array just grid right away
           if (this.response && is.array(this.response.data)){
-              this.flatGrid = true
-          } else {
+              this.showFlatGrid = true
+          }
+          // if response is an object, show dialog to user to select data property
+          else {
               this.parseDialog = true
           }
 
@@ -234,9 +236,7 @@
         }
     },
     computed: {
-        rawData() {
-            return JSON.stringify(this.data,null,4)
-        },
+        // parse all properties in the response object
         dataProperties() {
             let properties = []
             if (this.response){
@@ -248,39 +248,8 @@
             }
             return properties
         },
-        rawGrid(){
+        showRawGrid(){
             return this.grid_toggle === 0
-        },
-        vColumns(){
-            let columns = []
-            if (this.response) {
-                if (is.array(this.response.data)) {
-                    for (let key in this.response.data[0]) {
-                        columns.push(key)
-                    }
-                }
-                if (is.object(this.response.data) && this.dataKey && this.paginationKey){
-                    for (let key in this.response.data[this.dataKey][0]) {
-                        columns.push(key)
-                    }
-                }
-            }
-            return columns
-        },
-        vData() {
-            let data = []
-            if (this.response) {
-                if (is.array(this.response.data)) {
-                    console.log('vdata Changed')
-                    data =  this.response.data
-                }
-                if (is.object(this.response.data) && this.dataKey && this.paginationKey){
-                    console.log('vdata Changed')
-                    data =  this.response.data[this.dataKey]
-                }
-            }
-            console.log('new data',data)
-            return data
         }
     },
     components :{
