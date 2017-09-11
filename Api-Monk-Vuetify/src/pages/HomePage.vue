@@ -105,12 +105,12 @@
                            </span>
                             </v-card-title>
                             <v-card-text>
-                                <v-select
+                                <v-select v-model="dataKey"
                                         label="Data"
                                         required
                                         :items="dataProperties"
                                 ></v-select>
-                                <v-select
+                                <v-select v-model="paginationKey"
                                         label="Pagination"
                                         required
                                         :items="dataProperties"
@@ -119,7 +119,7 @@
                             <v-card-actions>
                                 <v-spacer></v-spacer>
                                 <v-btn class="blue--text darken-1" flat @click.native="parseDialog = false">Close</v-btn>
-                                <v-btn class="blue--text darken-1" flat @click.native="parseDialog = false">Save</v-btn>
+                                <v-btn class="blue--text darken-1" flat @click.native="onParseSave">Save</v-btn>
                             </v-card-actions>
                         </v-card>
                     </v-dialog>
@@ -141,7 +141,7 @@
         <!--flat grid-->
         <v-layout row wrap >
             <v-flex xs12>
-                <flat-grid v-if="flatGrid" :response="response"></flat-grid>
+                <flat-grid v-if="flatGrid" :response="response" :dataKey="dataKey" :paginationKey="paginationKey"></flat-grid>
             </v-flex>
         </v-layout>
         <!--END GRID COMPONENTS-->
@@ -214,9 +214,11 @@
         },
         dataProperties() {
             let properties = []
-            if (is.object(this.data)){
-                for (let key in this.data){
-                    properties.push(key)
+            if (this.response){
+                if (is.object(this.response.data)){
+                    for (let key in this.response.data){
+                        properties.push(key)
+                    }
                 }
             }
             return properties
