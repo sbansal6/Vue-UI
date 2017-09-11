@@ -88,9 +88,9 @@
         <v-layout row wrap>
             <v-flex xs7>
                 <div ui buttons>
-                    <v-btn-toggle v-model="toggle_exclusive">
+                    <v-btn-toggle v-model="grid_toggle">
                         <v-btn flat>Raw</v-btn>
-                        <v-btn flat>Flat</v-btn>
+                        <v-btn @click.stop="showFlatGrid" flat>Flat</v-btn>
                         <v-btn flat>Sql</v-btn>
                         <v-btn flat>Charts</v-btn>
                     </v-btn-toggle>
@@ -141,7 +141,7 @@
         <!--flat grid-->
         <v-layout row wrap >
             <v-flex xs12>
-                <flat-grid v-if="flatGrid" :response="response" :dataKey="dataKey" :paginationKey="paginationKey"></flat-grid>
+                <flat-grid v-if="flatGrid" :response="response" :vColumns="vColumns" :vData="vData"></flat-grid>
             </v-flex>
         </v-layout>
         <!--END GRID COMPONENTS-->
@@ -173,10 +173,11 @@
           bodyDialog: false,
           parseDialog: false,
           ex11: false,
-          toggle_exclusive: 0,
+          grid_toggle: 0,
           response:undefined,
           dataKey:undefined,
-          paginationKey:undefined
+          paginationKey:undefined,
+          flatGrid:false
       }
     },
     mounted () {
@@ -201,11 +202,17 @@
                         })
             }
         },
-        onResponseDialog() {
-            this.responseDialog = true
-        },
         onParseSave:function(){
             this.parseDialog = false
+            this.flatGrid = true
+        },
+        showFlatGrid(){
+          if (this.response && is.array(this.response.data)){
+              this.flatGrid = true
+          } else {
+              this.parseDialog = true
+          }
+
         }
     },
     computed: {
@@ -224,10 +231,37 @@
             return properties
         },
         rawGrid(){
-            return this.toggle_exclusive === 0
+            return this.grid_toggle === 0
         },
-        flatGrid(){
-            return this.toggle_exclusive === 1
+        vColumns(){
+            let columns = []
+            if (this.response) {
+                if (is.array(this.response.data)) {
+                    for (let key in this.response.data[0]) {
+                        columns.push(key)
+                    }
+                }
+                if (is.object(this.response.data) && this.dataKey && this.paginationKey){
+                    for (let key in this.response.data[this.dataKey][0]) {
+                        columns.push(key)
+                    }
+                }
+            }
+            return columns
+        },
+        vData() {
+            let data = []
+            if (this.response) {
+                if (is.array(this.response.data)) {
+                    console.log('vdata Changed')
+                    data =  this.response.data
+                }
+                if (is.object(this.response.data) && this.dataKey && this.paginationKey){
+                    console.log('vdata Changed')
+                    data =  this.response.data[this.dataKey]
+                }
+            }
+            return data
         }
     },
     components :{
