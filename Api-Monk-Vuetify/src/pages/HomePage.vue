@@ -153,6 +153,7 @@
 </template>
 
 <script>
+  const flaten  =  require('../services/flaten')
   import taffy from '../services/taffy'
   import RawGrid from '../components/RawGrid.vue'
   import FlatGrid from '../components/FlatGrid.vue'
@@ -241,7 +242,9 @@
             let properties = []
             if (this.response){
                 if (is.object(this.response.data)){
+                    console.log('keys',Object.keys(this.response.data))
                     for (let key in this.response.data){
+                        //console.log(`test ${key}`,flaten.parseProperties(this.response.data[key]))
                         properties.push(key)
                     }
                 }

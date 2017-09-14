@@ -119,5 +119,5 @@ function parseJson(data){
 }
 
 module.exports  = {
-    parseJson
+    parseJson,parseProperties
 }
