@@ -187,8 +187,9 @@
           grid_toggle: 0,
           response:undefined,
           dataKey:undefined,
-          paginationKey:undefined,
-          showFlatGrid:false
+          paginationKey:undefined
+//          ,
+//          showFlatGrid:false
       }
     },
     mounted () {
@@ -217,6 +218,7 @@
             this.parseDialog = false
             this.showFlatGrid = true
             if (this.$refs["refFlatGrid"]) {
+                this.$refs["refFlatGrid"].$refs['vuetable'].reload()
                 this.$refs["refFlatGrid"].$refs['vuetable'].normalizeFields()
             }
         },
@@ -253,6 +255,9 @@
         },
         showRawGrid(){
             return this.grid_toggle === 0
+        },
+        showFlatGrid(){
+            return this.grid_toggle === 1
         }
     },
     components :{

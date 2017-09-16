@@ -1,12 +1,13 @@
 <template>
     <!--http://www.rent-a-hero.de/wp/wp-content/uploads/2017/04/vuegrid/#/-->
+    <div style="overflow-x: scroll;">
         <vuetable ref="vuetable"
                   :data="vData"
                   :fields="vColumns"
                   :api-mode="false"
                   :css="css"
         ></vuetable>
-
+    </div>
 </template>
 
 <script>
@@ -25,7 +26,7 @@
         data(){
             return {
                 css :{
-                    tableClass: 'ui selectable celled stackable attached table',
+                    tableClass: 'ui dark grey selectable celled stackable attached table',
                     loadingClass: 'loading',
                     ascendingIcon: 'blue chevron up icon',
                     descendingIcon: 'blue chevron down icon',
@@ -38,19 +39,14 @@
         computed:{
             vColumns(){
                 let columns = []
-                if (this.response) {
+                if (this.vData.length > 0) {
                     if (is.array(this.response.data)) {
-                        console.log(`test array `,flaten.parseProperties(this.response.data))
                         for (let key in this.response.data[0]) {
                             columns.push(key)
                         }
                     }
                     if (is.object(this.response.data) && this.dataKey && this.paginationKey){
-                        console.log(`test object `,flaten.parseProperties(this.response.data[this.dataKey]))
                         columns =  flaten.parseProperties(this.response.data[this.dataKey]).fields
-//                        for (let key in this.response.data[this.dataKey][0]) {
-//                            columns.push(key)
-//                        }
                     }
                 }
                 return columns
@@ -62,7 +58,7 @@
                         data =  this.response.data
                     }
                     if (is.object(this.response.data) && this.dataKey && this.paginationKey){
-                        data =  this.response.data[this.dataKey]
+                        data =  csvjson.toObject(parseJson(this.response.data[this.dataKey]),csvOptions)
                     }
                 }
                 return data
