@@ -130,9 +130,6 @@
             </v-flex>
         </v-layout>
 
-        <!--sample test button, delete after-->
-        <v-btn flat @click.stop="destroy">Destroy</v-btn>
-
         <!--GRID COMPONENTS-->
         <!--raw grid-->
         <v-layout row wrap>
@@ -149,6 +146,12 @@
         </v-layout>
         <!--END GRID COMPONENTS-->
 
+        <v-layout row wrap >
+            <v-flex xs12>
+                 <sql-grid v-if="showSqlGrid"></sql-grid>
+            </v-flex>
+        </v-layout>
+
     </v-container>
 </template>
 
@@ -157,6 +160,7 @@
   import taffy from '../services/taffy'
   import RawGrid from '../components/RawGrid.vue'
   import FlatGrid from '../components/FlatGrid.vue'
+  import SqlGrid from '../components/SqlGrid.vue'
   import ResponseBar from '../components/ResponseBar.vue'
 
   const is = require('is');
@@ -188,8 +192,6 @@
           response:undefined,
           dataKey:undefined,
           paginationKey:undefined
-//          ,
-//          showFlatGrid:false
       }
     },
     mounted () {
@@ -258,10 +260,13 @@
         },
         showFlatGrid(){
             return this.grid_toggle === 1
+        },
+        showSqlGrid(){
+            return this.grid_toggle === 2
         }
     },
     components :{
-        RawGrid,FlatGrid,ResponseBar
+        RawGrid,FlatGrid,ResponseBar,SqlGrid
       }
   }
 </script>
