@@ -1,11 +1,12 @@
 <template>
     <codemirror :options="editorOptions"></codemirror>
+
 </template>
 
 <script>
     import { codemirror, CodeMirror,  } from 'vue-codemirror'
     require("codemirror/addon/hint/show-hint.css")
-    //require("codemirror/addon/hint/show-hint.js")
+    require("codemirror/addon/hint/show-hint.js")
     require('codemirror/addon/hint/sql-hint.js')
     export default {
         props:['response'],

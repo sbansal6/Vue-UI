@@ -2,7 +2,7 @@
 <!--** if api response content type is json then convert it into json-->
 
 <template>
-    <codemirror style="min-height:500px !important; box-sizing: border-box" v-model="rawData" :options="editorOptions"></codemirror>
+    <codemirror class="add" v-model="rawData" :options="editorOptions"></codemirror>
 </template>
 
 <script>
