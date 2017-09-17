@@ -5,4 +5,8 @@ https://api.mysocialpixel.com/accounts/91232/audiences?key=ueCgFzLvMDBVObkbAO3IY
 todo:
 1) Flaten out data, need to provide nested fields name to vtable
 2) provided nest properties to parseProperties grid
-cla
+
+
+Distribute as electron app
+
+https://medium.com/@diananina247/convert-vue-js-app-to-native-desktop-app-using-electron-76693e370b88

@@ -2,11 +2,19 @@
 <!--** if api response content type is json then convert it into json-->
 
 <template>
-    <codemirror class="add" v-model="rawData" :options="editorOptions"></codemirror>
+    <div >
+        <codemirror ref="rawEditor" v-model="rawData" :options="editorOptions"></codemirror>
+    </div>
+
 </template>
 
 <script>
   import { codemirror, CodeMirror } from 'vue-codemirror'
+  var minLines = 10;
+  var startingValue = '';
+  for (var i = 0; i < minLines; i++) {
+      startingValue += '\n';
+  }
   export default {
       props:['response'],
       data() {
@@ -18,7 +26,8 @@
                   theme: 'base16-dark',
                   lineNumbers: true,
                   line: true,
-                  readOnly:true
+                  readOnly:true,
+                  viewportMargin:10
 
               }
           }
@@ -31,19 +40,25 @@
                   } else {
                       return this.response.data
                   }
+              } else {
+                  let startingValue= ""
+                  for (var i = 0; i < 10; i++) {
+                      startingValue += '\n';
+                  }
+                  return startingValue
               }
           }
       },
       components :{
           codemirror
-      }
+      },
   }
 </script>
 
 <style>
     .CodeMirror {
         border: 1px solid #eee;
-        min-height: 600px;
-        max-height: 600px;
+        height: auto;
     }
+
 </style>

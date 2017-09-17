@@ -1,5 +1,5 @@
 <template>
-    <codemirror :options="editorOptions"></codemirror>
+    <codemirror v-model="rawData" :options="editorOptions"></codemirror>
 
 </template>
 
@@ -30,7 +30,14 @@
             }
         },
         computed: {
+            rawData(){
+                let startingValue= ""
+                for (var i = 0; i < 5; i++) {
+                    startingValue += '\n';clea
+                }
+                return startingValue
 
+            }
         },
         components :{
             codemirror
@@ -39,9 +46,5 @@
 </script>
 
 <style>
-    .CodeMirror {
-        border: 1px solid #eee;
-        min-height: 200px;
-        max-height: 200px;
-    }
+
 </style>
